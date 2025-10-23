@@ -52,7 +52,7 @@ class Module:
         res = list(self._parameters.items())
         for name, module in self._modules.items():
             for x, p in module.named_parameters():
-                res.append((f'{name}.{x}', p))
+                res.append((f"{name}.{x}", p))
         return res
 
     def parameters(self) -> Sequence[Parameter]:
@@ -76,7 +76,7 @@ class Module:
         self.__dict__["_parameters"][k] = val
         return val
 
-    def __setattr__(self, key: str, val: Parameter|Module|Any) -> None:
+    def __setattr__(self, key: str, val: Parameter | Module | Any) -> None:
         if isinstance(val, Parameter):
             self.__dict__["_parameters"][key] = val
         elif isinstance(val, Module):

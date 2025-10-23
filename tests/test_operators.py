@@ -23,7 +23,7 @@ from minitorch.operators import (
     relu,
     relu_back,
     sigmoid,
-    is_close
+    is_close,
 )
 
 from .strategies import assert_close, small_floats
